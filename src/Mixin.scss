@@ -31,3 +31,9 @@
 		@content;
 	}
 }
+
+@mixin high-resolution {
+    @media only screen and (min-resolution: 192dpi) {
+        @content;
+    }
+}

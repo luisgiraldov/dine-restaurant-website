@@ -55,9 +55,15 @@
 	list-style: none;
 }
 
+html {
+	/* Getting 10px (if browser default is 16px) as root font size for easy rem measurement */
+	font-size: 62.5%;
+}
+
 body {
 	font-family: 'League Spartan', sans-serif;
 	font-size: var(--default-fs);
+    font-weight: 400;
 	color: var(--color-white);
 }
 
