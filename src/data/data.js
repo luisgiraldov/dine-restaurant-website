@@ -12,7 +12,19 @@ import locallySourcedMedium2x from "../images/homepage/locally-sourced-tablet@2x
 import locallySourcedLarge from "../images/homepage/locally-sourced-desktop.jpg";
 import locallySourcedLarge2x from "../images/homepage/locally-sourced-desktop@2x.jpg";
 
-
+/* Menu images */
+import salmonSmall from "../images/homepage/salmon-mobile.jpg";
+import salmonSmall2x from "../images/homepage/salmon-mobile@2x.jpg";
+import salmonML from "../images/homepage/salmon-desktop-tablet.jpg";
+import salmonML2x from "../images/homepage/salmon-desktop-tablet@2x.jpg";
+import beefSmall from "../images/homepage/beef-mobile.jpg";
+import beefSmall2x from "../images/homepage/beef-mobile@2x.jpg";
+import beefML from "../images/homepage/beef-desktop-tablet.jpg";
+import beefML2x from "../images/homepage/beef-desktop-tablet.jpg";
+import chocolateSmall from "../images/homepage/chocolate-mobile.jpg";
+import chocolateSmall2x from "../images/homepage/chocolate-mobile@2x.jpg";
+import chocolateML from "../images/homepage/chocolate-desktop-tablet.jpg";
+import chocolateML2x from "../images/homepage/chocolate-desktop-tablet@2x.jpg";
 
 export const aboutData = [
 	{
@@ -41,6 +53,65 @@ export const aboutData = [
 			large: locallySourcedLarge,
 			large2x: locallySourcedLarge2x,
 			alt: "Locally sourced food",
+		},
+	},
+];
+
+export const menuData = [
+	{
+		id: 3,
+		title: "A few highlights from our menu",
+		text: "We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.",
+		images: {
+			small: "",
+			small2x: "",
+			medium: "",
+			medium2x: "",
+			large: "",
+			large2x: "",
+			alt: "",
+		}
+	},
+	{
+		id: 4,
+		title: "Seared Salmon Fillet",
+		text: "Our locally sourced salmon served with a refreshing buckwheat summer salad.",
+		images: {
+			small: salmonSmall,
+			small2x: salmonSmall2x,
+			medium: salmonML,
+			medium2x: salmonML2x,
+			large: salmonML,
+			large2x: salmonML2x,
+			alt: "Seared Salmon Fillet dish",
+		},
+	},
+	{
+		id: 5,
+		title: "Rosemary Filet Mignon",
+		text: "Our prime beef served to your taste with a delicious choice of seasonal sides.",
+		images: {
+			small: beefSmall,
+			small2x: beefSmall2x,
+			medium: beefML,
+			medium2x: beefML2x,
+			large: beefML,
+			large2x: beefML2x,
+			alt: "Rosemary Filet Mignon dish",
+		},
+	},
+	{
+		id: 6,
+		title: "Summer Fruit Chocolate Mousse",
+		text: "Creamy mousse combined with summer fruits and dark chocolate shavings.",
+		images: {
+			small: chocolateSmall,
+			small2x: chocolateSmall2x,
+			medium: chocolateML,
+			medium2x: chocolateML2x,
+			large: chocolateML,
+			large2x: chocolateML2x,
+			alt: "Summer Fruit Chocolate Mousse dish",
 		},
 	},
 ];

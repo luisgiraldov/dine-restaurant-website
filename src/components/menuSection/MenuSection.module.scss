@@ -1,0 +1,19 @@
+.menu-section {
+    &__image {
+        width: 32.7rem;
+        height: 24.5rem;
+        margin-bottom: 3.6rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        letter-spacing: -.25px;
+    }
+
+    &__text {
+        line-height: 2.6rem;
+        margin: .6rem 0 7.9rem;
+    }
+}

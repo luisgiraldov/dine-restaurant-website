@@ -1,15 +1,8 @@
 import { FC, ReactElement } from "react";
 import Styles from "./AboutSection.module.scss";
-
-interface Images {
-    small: string,
-    small2x: string,
-    medium: string,
-    medium2x: string,
-    large: string,
-    large2x: string,
-    alt: string
-}
+import Description from "../description/Description";
+import Picture from "../picture/Picture";
+import { Images } from "../../App";
 
 const AboutSection: FC<{ title: string; text: string; images: Images }> = ({
 	title,
@@ -19,7 +12,7 @@ const AboutSection: FC<{ title: string; text: string; images: Images }> = ({
 	return (
 		<div className={Styles["about-section"]}>
 			<div className={Styles["about-section__image-container"]}>
-				<picture>
+				{/* <picture>
 					<source
 						srcSet={`${images.small} 1x, ${images.small2x} 2x`}
 						media="(max-width: 767px)"
@@ -38,11 +31,10 @@ const AboutSection: FC<{ title: string; text: string; images: Images }> = ({
 						src={images.large2x}
 						className={Styles["about-section__image"]}
 					/>
-				</picture>
+				</picture> */}
+				<Picture images={images} className={Styles["about-section__image"]} />
 			</div>
-			<div className={Styles["pattern-divide"]}></div>
-			<h2 className={Styles["about-section__title"]}>{title}</h2>
-            <p className={Styles["about-section__text"]}>{text}</p>
+			<Description title={title} text={text} />
 		</div>
 	);
 };

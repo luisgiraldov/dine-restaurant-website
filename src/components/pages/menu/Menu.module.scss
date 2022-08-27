@@ -1,0 +1,11 @@
+@use "../../../Mixin.scss" as Mixin;
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 0 2.4rem 2.3rem; //2.3rem bottom + 7.9rem of margin-bottom from MenuSection for a total of 10.2rem
+    background-color: var(--color-cod-gray);
+    color: var(--color-white);
+}
