@@ -1,17 +1,12 @@
 import "./App.scss";
 import Header from "./components/pages/header/Header";
-import { Routes, Route } from "react-router-dom";
+import About from "./components/pages/about/About";
 
 function App() {
 	return (
 		<div className="App">
-			<Routes>
-				<Route path="/" element={<Header />} />
-				{/* <Route path="/about" element={<About />} />
-				<Route path="/portfolio" element={<Portfolio />} />
-				<Route path="/blog" element={<Blogs />} />
-				<Route path="/contact" element={<Contact />} /> */}
-			</Routes>
+			<Header />
+			<About />
 		</div>
 	);
 }

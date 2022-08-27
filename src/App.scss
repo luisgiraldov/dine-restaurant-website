@@ -37,7 +37,7 @@
         Shadows
     ==================================== */
 	--box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
-	--box-shadow-2: 1px 1px 20px rgba(0, 0, 0, 0.1);
+	--box-shadow-2: 0px 50px 60px rgb(0 0 0 / 20%);
 	--box-shadow-3: 1px 1px 20px rgba(0, 0, 0, 0.3);
 	--box-shadow-4: 0px 4px 20px rgba(0, 0, 0, 0.8);
     /* ================================= 
@@ -64,7 +64,6 @@ body {
 	font-family: 'League Spartan', sans-serif;
 	font-size: var(--default-fs);
     font-weight: 400;
-	color: var(--color-white);
 }
 
 a {
