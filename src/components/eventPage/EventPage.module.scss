@@ -1,11 +1,10 @@
+@use "../../Mixin.scss" as Mixin;
+
 .event-page {
     text-align: center;
 
     &__title {
-        font-size: 3.2rem;
-        font-weight: 700;
-        line-height: 4rem;
-        letter-spacing: -0.4px;
+        @include Mixin.title-1;
     }
 
     &__text {

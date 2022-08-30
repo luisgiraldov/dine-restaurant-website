@@ -1,0 +1,23 @@
+@use "../../Mixin.scss" as Mixin;
+
+.call-to-action {
+    width: 100%;
+    height: 32.8rem;
+    background-image: rgba(17,17,17,.8), url(../../images/homepage/ready-bg-mobile.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include Mixin.high-resolution {
+        background-image: url(../../images/homepage/ready-bg-mobile@2x.jpg);
+    }
+
+    &__title {
+        color: var(--color-white);
+        @include Mixin.title-1;
+        margin-bottom: 2rem;
+    }
+}

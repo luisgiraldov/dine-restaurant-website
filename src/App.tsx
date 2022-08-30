@@ -3,6 +3,7 @@ import Header from "./components/pages/header/Header";
 import About from "./components/pages/about/About";
 import Menu from "./components/pages/menu/Menu";
 import Events from "./components/pages/events/Events";
+import CallToAction from "./components/callToAction/CallToAction";
 
 export interface Images {
     small: string,
@@ -23,6 +24,7 @@ function App() {
 				<About />
 				<Menu />
 				<Events />
+				<CallToAction />
 			</main>
 		</div>
 	);

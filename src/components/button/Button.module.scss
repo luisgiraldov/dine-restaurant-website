@@ -8,10 +8,10 @@
     line-height: 1.6rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
+    color: var(--color-white);
 
     &__dark {
         background-color: var(--color-cod-gray);
-        color: var(--color-white);
     }
 
     &__light {
