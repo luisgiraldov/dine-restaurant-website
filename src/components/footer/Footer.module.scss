@@ -1,0 +1,19 @@
+@use "../../Mixin.scss" as Mixin;
+
+.footer {
+    background-color: var(--color-cod-gray);
+    padding: 8rem 2.4rem 7.8rem;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include Mixin.only-phones {
+        text-align: center;
+    }
+
+    &__text--address {
+        margin: 4.2rem 0 3.2rem;
+    }
+}
