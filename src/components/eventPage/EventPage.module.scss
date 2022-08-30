@@ -1,0 +1,15 @@
+.event-page {
+    text-align: center;
+
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 4rem;
+        letter-spacing: -0.4px;
+    }
+
+    &__text {
+        margin: 1.3rem 0 2.7rem;
+        line-height: 2.6rem;
+    }
+}

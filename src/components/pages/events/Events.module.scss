@@ -1,0 +1,43 @@
+.events {
+	padding: 8rem 2.4rem 12.4rem;
+
+	&__navigation {
+		margin: 4.9rem auto 2.7rem;
+		text-align: center;
+	}
+
+	&__navigation > a:not(:last-child) {
+		margin-bottom: 1.6rem;
+	}
+
+	&__link {
+		display: block;
+		font-size: 1.7rem;
+		font-weight: 600;
+		line-height: 2.8rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		padding: 0.5rem 0;
+		color: var(--color-gray-text);
+		opacity: 0.5;
+		transition: all 0.8s;
+	}
+}
+
+.active-btn {
+	position: relative;
+	opacity: 1;
+	transition: all 0.8s;
+}
+
+.active-btn::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 4.8rem;
+	height: 1px;
+	background: var(--color-beaver);
+	bottom: -1px;
+}

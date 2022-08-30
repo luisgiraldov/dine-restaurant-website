@@ -19,6 +19,7 @@
     --color-ebony-clay-rgb: rgb(36, 43, 55);
     --color-shuttle-gray: #5c6779;
     --color-shuttle-gray-rgb: rgb(92, 103, 121);
+	--color-gray-text: #4c4c4c;
     /* Tertiary Colors */
 	--color-white: #ffffff;
 	--color-black: #000;
@@ -40,6 +41,7 @@
 	--box-shadow-2: 0px 50px 60px rgb(0 0 0 / 20%);
 	--box-shadow-3: 1px 1px 20px rgba(0, 0, 0, 0.3);
 	--box-shadow-4: 0px 4px 20px rgba(0, 0, 0, 0.8);
+	--box-shadow-5:0px 70px 90px -50px rgb(0 0 0 / 50%);
     /* ================================= 
         Font
     ==================================== */
@@ -71,4 +73,46 @@ a {
 	text-decoration: none;
 	color: inherit;
 	font-family: inherit;
+}
+
+/* ================================= 
+    Animations
+==================================== */
+
+.fadeIn {
+	animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+	animation: 0.5s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		// transform: translateY(-100%);
+		transform: translateX(-100%);
+		// transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		// transform: translateY(0);
+		transform: translateX(0);
+		// transform: scale(1);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		// transform: translateY(0);
+		transform: translateX(0);
+		// transform: scale(1);
+	}
+	to {
+		opacity: 0;
+		// transform: translateY(-100%);
+		transform: translateX(-100%);
+		// transform: scale(0);
+	}
 }

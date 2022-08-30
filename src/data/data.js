@@ -26,6 +26,14 @@ import chocolateSmall2x from "../images/homepage/chocolate-mobile@2x.jpg";
 import chocolateML from "../images/homepage/chocolate-desktop-tablet.jpg";
 import chocolateML2x from "../images/homepage/chocolate-desktop-tablet@2x.jpg";
 
+/* Events images */
+import familySmall from "../images/homepage/family-gathering-mobile.jpg";
+import familySmall2x from "../images/homepage/family-gathering-mobile@2x.jpg";
+import familyMedium from "../images/homepage/family-gathering-tablet.jpg";
+import familyMedium2x from "../images/homepage/family-gathering-tablet@2x.jpg";
+import familyLarge from "../images/homepage/family-gathering-desktop.jpg";
+import familyLarge2x from "../images/homepage/family-gathering-desktop@2x.jpg";
+
 export const aboutData = [
 	{
 		id: 1,
@@ -70,7 +78,7 @@ export const menuData = [
 			large: "",
 			large2x: "",
 			alt: "",
-		}
+		},
 	},
 	{
 		id: 4,
@@ -112,6 +120,65 @@ export const menuData = [
 			large: chocolateML,
 			large2x: chocolateML2x,
 			alt: "Summer Fruit Chocolate Mousse dish",
+		},
+	},
+];
+
+export const eventsData = [
+	{
+		id: 7,
+		title: "Family Gathering",
+		text: "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.",
+		images: {
+			small: "",
+			small2x: "",
+			medium: "",
+			medium2x: "",
+			large: "",
+			large2x: "",
+			alt: "",
+		},
+	},
+	{
+		id: 8,
+		title: "Special Events",
+		text: "Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.",
+		images: {
+			small: "",
+			small2x: "",
+			medium: "",
+			medium2x: "",
+			large: "",
+			large2x: "",
+			alt: "",
+		},
+	},
+	{
+		id: 9,
+		title: "Social Events",
+		text: "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.",
+		images: {
+			small: "",
+			small2x: "",
+			medium: "",
+			medium2x: "",
+			large: "",
+			large2x: "",
+			alt: "",
+		},
+	},
+	{
+		id: 10,
+		title: "",
+		text: "",
+		images: {
+			small: familySmall,
+			small2x: familySmall2x,
+			medium: familyMedium,
+			medium2x: familyMedium2x,
+			large: familyLarge,
+			large2x: familyLarge2x,
+			alt: "Family",
 		},
 	},
 ];

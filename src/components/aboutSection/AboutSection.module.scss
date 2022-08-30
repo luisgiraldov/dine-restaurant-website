@@ -5,11 +5,4 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-
-    &__image {
-        width: 32.7rem;
-        height: 40rem;
-        box-shadow: var(--box-shadow-2);
-        margin: 0 auto;
-    }
 }

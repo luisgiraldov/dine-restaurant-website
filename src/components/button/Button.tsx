@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 const Button: FC<{text: string, type?: string, address: string}> = ({ text, type, address }): ReactElement => {
     if(type && type === "submit") {
         return (
-            <button type={type} className={Styles.button}>{text}</button>
+            <button type={type} className={`${Styles.button} ${Styles["button__dark"]}`}>{text}</button>
         );
     }
 
-    if(type && type === "light-button") {
-        <Link to={address} className={`${Styles.button} ${Styles["light-button"]}`}>{text}</Link>
+    if(type && type === "dark-button") {
+        return (
+            <Link to={address} className={`${Styles.button} ${Styles["button__dark"]}`}>{text}</Link>
+        );
     }
 
     return (
-        <Link to={address} className={`${Styles.button} ${Styles["dark-button"]}`}>{text}</Link>
+        <Link to={address} className={`${Styles.button} ${Styles["button__light"]}`}>{text}</Link>
     )
 };
 
