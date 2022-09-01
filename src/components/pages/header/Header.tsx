@@ -7,7 +7,7 @@ const Header = (): ReactElement => {
 	return (
 		<header className={Styles.header}>
 			<div className={Styles["header__logo-container"]}>
-				<img src={logo} alt="" className={Styles["header__logo"]} />
+				<img src={logo} alt="Logo" className={Styles["header__logo"]} />
 			</div>
 			<div className={Styles["header__text-container"]}>
 				<h1 className={Styles["header__title"]}>
@@ -18,7 +18,7 @@ const Header = (): ReactElement => {
 					surroundings. Eat the freshest produce from the comfort of
 					our farmhouse.
 				</p>
-				<Button text="Book a table" address="#" />
+				<Button text="Book a table" address="/booking" />
 			</div>
 		</header>
 	);

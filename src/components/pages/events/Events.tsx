@@ -1,35 +1,23 @@
 import { useState, useEffect, ReactElement } from "react";
-import { Routes, Route, useLocation, Link } from "react-router-dom";
 import Styles from "./Events.module.scss";
 import EventPage from "../../eventPage/EventPage";
 import { eventsData } from "../../../data/data";
 import ShadowedPicture from "../../shadowedPicture/ShadowedPicture";
 
 const Events = (): ReactElement => {
-	/** Animation between routes */
-	const location = useLocation();
-	const [displayLocation, setDisplayLocation] = useState(location);
+	/** Active link */
+	const [slide, setSlide] = useState("family-gathering");
+	const setActiveControl = (currentSlide: string) => {
+		setSlide(currentSlide);
+	};
+
+	/** Animation between slides */
+	const [displayCurrentSlide, setDisplayCurrentSlide] = useState(slide);
 	const [transitionStage, setTransistionStage] = useState("fadeIn");
 
 	useEffect(() => {
-		if (location !== displayLocation) setTransistionStage("fadeOut");
-	}, [location, displayLocation]);
-
-	/** Active link */
-	const [pathName, setPathName] = useState("/");
-	const setActiveControl = (currentPath: string) => {
-		setPathName(currentPath);
-	};
-
-	useEffect(() => {
-		if (location) {
-			let tmp = location.pathname.slice(
-				location.pathname.lastIndexOf("/"),
-				location.pathname.length
-			);
-			setPathName(tmp);
-		}
-	}, [location]);
+		if (slide !== displayCurrentSlide) setTransistionStage("fadeOut");
+	}, [slide, displayCurrentSlide]);
 
 	return (
 		<section className={Styles.events}>
@@ -38,79 +26,67 @@ const Events = (): ReactElement => {
 				className={Styles["events__image"]}
 			/>
 			<nav className={Styles["events__navigation"]}>
-				<Link
-					to="/family-gathering"
-					className={`${Styles["events__link"]} 
-								${"/family-gathering" === pathName ? Styles["active-btn"] : "" } 
-								${"/" === pathName ? Styles["active-btn"] : ""}`}
-					onClick={() => setActiveControl("/family-gathering")}
+				<button
+					className={`${Styles["events__button"]}
+                               ${
+									"family-gathering" === slide
+										? Styles["active-btn"]
+										: ""
+								}`}
+					onClick={() => setActiveControl("family-gathering")}
 				>
 					Family Gathering
-				</Link>
-				<Link
-					to="/special-events"
-					className={`${Styles["events__link"]} 
-								${"/special-events" === pathName ? Styles["active-btn"] : ""}`}
-					onClick={() => setActiveControl("/special-events")}
+				</button>
+				<button
+					className={`${Styles["events__button"]}
+                               ${
+									"special-events" === slide
+										? Styles["active-btn"]
+										: ""
+								}`}
+					onClick={() => setActiveControl("special-events")}
 				>
 					Special Events
-				</Link>
-				<Link
-					to="/social-events"
-					className={`${Styles["events__link"]} 
-								${"/social-events" === pathName ? Styles["active-btn"] : ""}`}
-					onClick={() => setActiveControl("/social-events")}
+				</button>
+				<button
+					className={`${Styles["events__button"]}
+                               ${
+									"social-events" === slide
+										? Styles["active-btn"]
+										: ""
+								}`}
+					onClick={() => setActiveControl("social-events")}
 				>
 					Social Events
-				</Link>
+				</button>
 			</nav>
 			<div
 				className={`${transitionStage}`}
 				onAnimationEnd={() => {
 					if (transitionStage === "fadeOut") {
 						setTransistionStage("fadeIn");
-						setDisplayLocation(location);
+						setDisplayCurrentSlide(slide);
 					}
 				}}
 			>
-			<Routes location={displayLocation}>
-				<Route
-					path="/"
-					element={
-						<EventPage
-							title={eventsData[0].title}
-							text={eventsData[0].text}
-						/>
-					}
-				/>
-				<Route
-					path="/family-gathering"
-					element={
-						<EventPage
-							title={eventsData[0].title}
-							text={eventsData[0].text}
-						/>
-					}
-				/>
-				<Route
-					path="/special-events"
-					element={
-						<EventPage
-							title={eventsData[1].title}
-							text={eventsData[1].text}
-						/>
-					}
-				/>
-				<Route
-					path="/social-events"
-					element={
-						<EventPage
-							title={eventsData[2].title}
-							text={eventsData[2].text}
-						/>
-					}
-				/>
-			</Routes>
+				{"family-gathering" === displayCurrentSlide && (
+					<EventPage
+						title={eventsData[0].title}
+						text={eventsData[0].text}
+					/>
+				)}
+				{"special-events" === displayCurrentSlide && (
+					<EventPage
+						title={eventsData[1].title}
+						text={eventsData[1].text}
+					/>
+				)}
+				{"social-events" === displayCurrentSlide && (
+					<EventPage
+						title={eventsData[2].title}
+						text={eventsData[2].text}
+					/>
+				)}
 			</div>
 		</section>
 	);

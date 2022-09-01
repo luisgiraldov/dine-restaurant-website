@@ -10,14 +10,14 @@ const Footer = (): ReactElement => {
 			</div>
 			<div className={Styles["footer__text"]}>
 				<p className={Styles["footer__text--address"]}>
-					<div>Marthwaite, Sedbergh</div>
-					<div>Cumbria</div>
-					<div>+00 44 123 4567</div>
+					<span>Marthwaite, Sedbergh</span>
+					<span>Cumbria</span>
+					<span>+00 44 123 4567</span>
 				</p>
 				<p className={Styles["footer__text--times"]}>
-					<div>OPEN TIMES</div>
-					<div>MON - FRI: 09:00 AM - 10:00 PM</div>
-					<div>SAT - SUN: 09:00 AM - 11:30 PM</div>
+					<span>OPEN TIMES</span>
+					<span>MON - FRI: 09:00 AM - 10:00 PM</span>
+					<span>SAT - SUN: 09:00 AM - 11:30 PM</span>
 				</p>
 			</div>
 		</footer>

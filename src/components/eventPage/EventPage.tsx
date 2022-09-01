@@ -10,7 +10,7 @@ const EventPage: FC<{ title: string; text: string }> = ({
 		<div className={Styles["event-page"]}>
 			<h2 className={Styles["event-page__title"]}>{title}</h2>
 			<p className={Styles["event-page__text"]}>{text}</p>
-			<Button text="Book a table" address="#" type="dark-button" />
+			<Button text="Book a table" address="/booking" type="dark-button" />
 		</div>
 	);
 };

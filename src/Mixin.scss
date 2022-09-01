@@ -8,6 +8,25 @@
 	letter-spacing: -0.4px;
 }
 
+@mixin header-styles {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: top center;
+	color: var(--color-white);
+}
+
+@mixin title-header {
+	font-size: 3.2rem;
+	font-weight: 300;
+	line-height: 4rem;
+	letter-spacing: -0.4px;
+}
+
+@mixin text-header {
+	line-height: 4rem;
+}
+
 /* ================================= 
     Media Queries
 ==================================== */

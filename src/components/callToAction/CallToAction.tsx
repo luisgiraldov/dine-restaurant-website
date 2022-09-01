@@ -8,7 +8,7 @@ const CallToAction = (): ReactElement => {
             <h3 className={Styles["call-to-action__title"]}>
                 Ready to make a reservation?
             </h3>
-            <Button text="Book a table" address="#" />
+            <Button text="Book a table" address="/booking" />
         </section>
     );
 };

@@ -1,12 +1,12 @@
 @use "../../../Mixin.scss" as Mixin;
 
-.header {
-    background-image: url(../../../images/homepage/hero-bg-mobile.jpg);
-    padding: 24.2rem 2.4rem 15.2rem;
+.booking {
+    background-image: url(../../../images/booking/hero-bg-mobile.jpg);
+    padding: 5.6rem 2.4rem 22.8rem;
 
     @include Mixin.header-styles;
     @include Mixin.high-resolution {
-        background-image: url(../../../images/homepage/hero-bg-mobile@2x.jpg);
+        background-image: url(../../../images/booking/hero-bg-mobile@2x.jpg);
     }
 
     @include Mixin.up-to-tablet {
@@ -14,20 +14,15 @@
     }
 
     &__logo-container {
-        margin-bottom: 3.6rem;
+        margin-bottom: 4.4rem;
     }
 
     &__title {
         @include Mixin.title-header;
-
-        & > span {
-            display: block;
-        }
     }
 
     &__text {
         @include Mixin.text-header;
-        margin: 2.1rem 0 5.3rem;
+        margin: 1.3rem 0 1.9rem;
     }
-
 }

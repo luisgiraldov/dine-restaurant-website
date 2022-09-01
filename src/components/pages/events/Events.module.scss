@@ -2,25 +2,29 @@
 	padding: 8rem 2.4rem 12.4rem;
 
 	&__navigation {
-		margin: 4.9rem auto 2.7rem;
+		margin: 4.9rem auto 3.2rem;
 		text-align: center;
 	}
 
-	&__navigation > a:not(:last-child) {
+	&__navigation > button:not(:last-child) {
 		margin-bottom: 1.6rem;
 	}
 
-	&__link {
-		display: block;
+	&__button {
+		display: inline-block;
 		font-size: 1.7rem;
 		font-weight: 600;
 		line-height: 2.8rem;
 		letter-spacing: 2.5px;
 		text-transform: uppercase;
-		padding: 0.5rem 0;
+		padding: .5rem 0;
 		color: var(--color-gray-text);
 		opacity: 0.5;
 		transition: all 0.8s;
+		//change <button> default styles
+		border: none;
+		background-color: inherit;
+		cursor: pointer;
 	}
 }
 
